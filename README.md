@@ -1,4 +1,4 @@
-# 🔬 Multi-Agent Deep Research & Synthesizer
+# Multi-Agent Deep Research & Synthesizer
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph%20%2F%20StateGraph-orange.svg)](https://github.com/langchain-ai/langgraph)
@@ -11,7 +11,7 @@ Interface web épurée inspirée du design de **[cottutom.fr](https://cottutom.f
 
 ---
 
-## 🏛️ Architecture Multi-Agents
+## Architecture Multi-Agents
 
 Le système orchestre 4 agents spécialisés à travers une machine à états `StateGraph` avec typage strict et boucles de réflexion :
 
@@ -55,7 +55,7 @@ flowchart TD
 ```
 
 ### Principes Clés
-1. **Alignement d'Entité Strict & Anti-Hallucination** : Filtrage des faux positifs et de l'autocorrection des moteurs de recherche (ex: rejet des homophones et des dérives phonétiques).
+1. **Alignement d'Entité Strict & Anti-Hallucination** : Filtrage des faux positifs et de l'autocorrection des moteurs de recherche (rejet des homophones et des dérives phonétiques).
 2. **Rapport Négatif Transparent** : Si une entité ou un axe n'a aucune donnée publique vérifiable sur le web ouvert, le système signale honnêtement l'absence de données sans jamais inventer de faits ni de fausses citations.
 3. **Parallélisme Asynchrone (Fan-Out)** : Les sous-agents chercheurs explorent et scrapent le web en parallèle.
 4. **Boucle d'Auto-Correction (Reflection Loop)** : L'agent Critique évalue la complétude, la fiabilité des sources et ajuste la stratégie avant la rédaction finale.
@@ -63,13 +63,13 @@ flowchart TD
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Prérequis
 - **Python 3.11+**
 - **[uv](https://github.com/astral-sh/uv)** (recommandé pour une installation instantanée) ou `pip`
 
-### Méthode 1 : Avec `uv` (Recommandé)
+### Méthode 1 : Avec uv (Recommandé)
 
 ```bash
 # 1. Cloner le dépôt
@@ -84,7 +84,7 @@ source .venv/bin/activate  # Sur macOS/Linux
 uv pip install -e .
 ```
 
-### Méthode 2 : Avec `pip` standard
+### Méthode 2 : Avec pip standard
 
 ```bash
 git clone https://github.com/tomcu78/multi-agent-deep-research.git
@@ -98,7 +98,7 @@ pip install -e .
 
 ---
 
-## ⚙️ Configuration (Optionnel)
+## Configuration (Optionnel)
 
 Copiez le fichier `.env.example` vers `.env` pour renseigner vos clés d'API :
 
@@ -129,7 +129,7 @@ MAX_SUBTASKS=3
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 ### 1. Dashboard Web (Interface cottutom.fr / Linear)
 
@@ -141,8 +141,8 @@ uv run python start_server.py
 uv run uvicorn src.api.app:app --host 0.0.0.0 --port 8001 --reload
 ```
 
-- 🌐 **Interface Web** : Rendez-vous sur **`http://localhost:8001/`**
-- 📚 **Swagger API Docs** : Rendez-vous sur **`http://localhost:8001/docs`**
+- **Interface Web** : Rendez-vous sur **`http://localhost:8001/`**
+- **Documentation OpenAPI (Swagger)** : Rendez-vous sur **`http://localhost:8001/docs`**
 
 ---
 
@@ -160,7 +160,7 @@ uv run python -m src.ui.cli
 
 ---
 
-## 🧪 Tests Automatisés
+## Tests Automatisés
 
 Le projet comprend une suite complète de tests unitaires et d'intégration validant le graphe d'état, les filtres d'entités, le critic loop et l'API :
 
@@ -170,7 +170,7 @@ uv run pytest -v
 
 ---
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 multi-agent-deep-research/
@@ -211,7 +211,7 @@ multi-agent-deep-research/
 
 ---
 
-## 📄 Licence
+## Licence
 
 Projet sous licence MIT. Libre d'utilisation et d'adaptation.
 
